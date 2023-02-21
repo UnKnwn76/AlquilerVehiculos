@@ -76,9 +76,11 @@ public class Cliente {
 		if (!dni.matches(ER_DNI)) {
 			throw new IllegalArgumentException("ERROR: El DNI no tiene un formato válido.");
 		}
+		
 		if (!comprobarLetraDni(dni)) {
 			throw new IllegalArgumentException("ERROR: La letra del DNI no es correcta.");
 		}
+		
 		this.dni = dni;
 	}
 
